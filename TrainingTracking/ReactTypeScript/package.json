@@ -1,12 +1,11 @@
 {
-"homepage": "https://your-username.github.io/your-repo-name",
+"homepage": "https://brian-e-shilo.github.io/WebDevTraining",
   "scripts": {
   "start": "parcel src/index.html --port 3000",
-  "build": "parcel build src/index.html --dist-dir build",
+  "build": "parcel build src/index.html",
   "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-
-  },
+  "deploy": "gh-pages -d dist"
+},
   "dependencies": {
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
