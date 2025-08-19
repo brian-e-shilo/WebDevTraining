@@ -1,6 +1,7 @@
 {
 "homepage": "https://brian-e-shilo.github.io/WebDevTraining",
   "scripts": {
+  "build": "parcel build src/index.html --public-url ./",
   "start": "parcel src/index.html --port 3000",
   "build": "parcel build src/index.html",
   "predeploy": "npm run build",
