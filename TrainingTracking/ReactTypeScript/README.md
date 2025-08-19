@@ -1,7 +1,4 @@
-# React + TypeScript basic app
-
-This project is a practice exercise where I explored **React hooks** using TypeScript and Parcel bundler.
-
+# React-TypeScript basic app
 ## What I learnt
 - Setting up a React + TypeScript project
 - Using and understanding different **React Hooks** and how to basically use **props**:
