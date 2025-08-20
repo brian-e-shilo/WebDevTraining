@@ -1,22 +1,17 @@
 import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import Greeting from "./components/Greeting";
-import TaskForm from "./components/TaskForm";
-import TaskList from "./components/TaskList";
-import Counter from "./components/Counter";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import "./styles.css";
 
 const App: React.FC = () => {
-  const [tasks, setTasks] = useState<string[]>([]);
-
-  const addTask = (task: string) => setTasks([...tasks, task]);
+  const [title, setTitle] = useState("Let us cook!");
 
   return (
     <div className="app">
-      <Greeting name="Brian" />
+      <Header title={title} />
 
       <nav>
         <Link to="/">Home</Link> |{" "}
@@ -32,12 +27,7 @@ const App: React.FC = () => {
         <Route path="/contact" element={<Contact />} />
       </Routes>
 
-      <h2>Counter</h2>
-      <Counter />
-
-      <h2>Task Manager</h2>
-      <TaskForm onAdd={addTask} />
-      <TaskList tasks={tasks} />
+      <Footer year={new Date().getFullYear()} />
     </div>
   );
 };

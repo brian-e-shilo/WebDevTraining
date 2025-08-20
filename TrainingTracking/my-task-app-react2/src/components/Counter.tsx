@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Counter: React.FC = () => {
-  const [count, setCount] = useState(0);
+type CounterProps = {
+  count: number;
+  onIncrement: () => void;
+  onDecrement: () => void;
+  onReset: () => void;
+};
 
+const Counter: React.FC<CounterProps> = ({ count, onIncrement, onDecrement, onReset }) => {
   return (
     <div>
       <h3>Counter: {count}</h3>
-      <button onClick={() => setCount(count + 1)}>+1</button>
-      <button onClick={() => setCount(count - 1)}>-1</button>
+      <button onClick={onIncrement}>+1</button>
+      <button onClick={onDecrement}>-1</button>
+      <button onClick={onReset}>Reset</button>
     </div>
   );
 };
